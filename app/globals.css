@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Custom CSS to override Dynamic Button */
+
+.dynamic-shadow-dom {
+  --dynamic-font-family-primary: "Poppins", sans-serif;
+  --dynamic-font-family-numbers: "Roboto Mono", monospace, sans-serif;
+  --dynamic-base-1: #18181b;
+  --dynamic-base-2: #1F1E24;
+  --dynamic-base-3: #1F1E24;
+  --dynamic-base-4: #34333a;
+  --dynamic-base-5: #1F1E24;
+  --dynamic-border-radius: 62px;
+  --dynamic-connect-button-background: #fff;
+  --dynamic-connect-button-color: #000;
+  --dynamic-connect-button-background-hover: #4779FF;
+  --dynamic-connect-button-color-hover: #fff;
+  --dynamic-connect-button-shadow-hover: 0px 3px 0px #000000;
+  --dynamic-tooltip-color: #000;
+  --dynamic-tooltip-text-color: #fff;
+}
+
+.hover\:scale-101:hover {
+  --tw-scale-x: 1.01;
+  --tw-scale-y: 1.01;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.text-xxs {
+  font-size: 0.67rem /* 12px */;
+  line-height: 1rem /* 16px */;
+}
