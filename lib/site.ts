@@ -4,7 +4,7 @@ export const siteConfig = {
   twitterUsername: "@",
   version: "v0.9.8",
   url: "https://kit.summer.sh/",
-  ogImage: "https://i.postimg.cc/43NdHNXm/metasummer.png",
+  ogImage: "https://kit.summer.sh/metasummerkit.png",
   description:
     "The SummerKit to easily get started building the Onchain Summer on Base.",
   links: {
