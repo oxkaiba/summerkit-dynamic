@@ -13,7 +13,7 @@ export const siteConfig = {
     discord: "https://discord.gg/",
     telegram: "https://t.me/",
     github: "https://github.com/",
-    repo: "https://github.com/summershsh/summerkit",
+    repo: "https://github.com/oxkaiba/summerkit-dynamic/",
     trade: "https://aerodrome.finance/swap/",
     bridge: "https://superbridge.app/base/",
   },
