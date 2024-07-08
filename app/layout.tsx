@@ -66,7 +66,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <ThemeProvider
         attribute="class"
-        defaultTheme="light"
+        defaultTheme="system"
+        enableSystem
         disableTransitionOnChange
       >
         <body className={`${inter.className} min-h-screen flex flex-col antialiased bg-background`}>
