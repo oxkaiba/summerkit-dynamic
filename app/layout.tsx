@@ -1,3 +1,5 @@
+"use client"
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site"
@@ -10,6 +12,7 @@ import {
 import { Providers } from "./providers";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,29 +63,35 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <DynamicContextProvider
-        settings={{
-          environmentId: "cefeb691-0523-41e8-8945-f1913da0df3c",
-          walletConnectors: [EthereumWalletConnectors],
-          recommendedWallets: [{ walletKey: "coinbase" }],
-        }}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="light"
+        disableTransitionOnChange
       >
-        <Providers>
-          <DynamicWagmiConnector>
-            <body className={`${inter.className} bg-soul-950 min-h-screen flex flex-col antialiased`}>
-              <div className="flex justify-center items-center">
-                <Header />
-              </div>
-              <main className="flex-grow">
-                {children}
-              </main>
-              <Footer />
-            </body>
-          </DynamicWagmiConnector>
-        </Providers>
-      </DynamicContextProvider>
+        <body className={`${inter.className} min-h-screen flex flex-col antialiased bg-background`}>
+          <DynamicContextProvider
+            theme="light"
+            settings={{
+              environmentId: "cefeb691-0523-41e8-8945-f1913da0df3c",
+              walletConnectors: [EthereumWalletConnectors],
+              recommendedWallets: [{ walletKey: "coinbase" }],
+            }}
+          >
+            <Providers>
+              <DynamicWagmiConnector>
+                <div className="flex justify-center items-center">
+                  <Header />
+                </div>
+                <main className="flex-grow">{children}</main>
+                <Footer />
+              </DynamicWagmiConnector>
+            </Providers>
+          </DynamicContextProvider>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

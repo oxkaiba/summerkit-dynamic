@@ -1,4 +1,4 @@
-![SummerKit](/public/metasummerkit.png)
+![SummerKit](/public/metasummer.png)
 
 This is a [Next.js](https://nextjs.org/) project using [Dynamic](https://dynamic.xyz), [Wagmi](https://wagmi.sh), [Viem](https://viem.sh), [Shadcn](https://ui.shadcn.com) and [Tailwind](https://tailwindcss.com) for Base and Base Sepolia (Coinbase Smart-Wallet Supported)
 
@@ -7,7 +7,7 @@ This is a [Next.js](https://nextjs.org/) project using [Dynamic](https://dynamic
 Open your IDE of choice and run 
 
 ```bash 
-git clone https://github.com/oxkaiba/summerkit-dynamic.git
+git clone https://github.com/summershsh/SummerKit.git
 ```
 Then, install all the dependencies needed by running:
 

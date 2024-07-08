@@ -9,13 +9,11 @@ export default function CustomConnectButton() {
 
   return (
     isLoggedIn ? (
-      <div className="border border-zinc-800/50 rounded-full">
-        <DynamicWidget />
-      </div>
+      <DynamicWidget />
     ) : (
       <button
-        className="bg-zinc-900 hover:bg-zinc-800/80 p-2 px-4 rounded-full text-sm
-        font-semibold transition-transform transform hover:scale-101 border border-zinc-800/50"
+        className="bg-transparent border border-zinc-800/50 hover:bg-accent p-2 px-4 rounded-full text-sm
+        font-semibold transition-transform transform hover:scale-101"
         onClick={() => setShowAuthFlow(true)}
       >
         Connect&nbsp;Wallet

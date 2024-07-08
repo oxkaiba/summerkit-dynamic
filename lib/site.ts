@@ -4,7 +4,7 @@ export const siteConfig = {
   twitterUsername: "@",
   version: "v0.9.8",
   url: "https://kit.summer.sh/",
-  ogImage: "https://kit.summer.sh/metasummerkit.png",
+  ogImage: "https://i.postimg.cc/43NdHNXm/metasummer.png",
   description:
     "The SummerKit to easily get started building the Onchain Summer on Base.",
   links: {
@@ -13,7 +13,7 @@ export const siteConfig = {
     discord: "https://discord.gg/",
     telegram: "https://t.me/",
     github: "https://github.com/",
-    repo: "https://github.com/oxkaiba/summerkit-dynamic/",
+    repo: "https://github.com/summershsh/summerkit",
     trade: "https://aerodrome.finance/swap/",
     bridge: "https://superbridge.app/base/",
   },

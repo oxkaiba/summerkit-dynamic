@@ -6,7 +6,7 @@ import Link, { LinkProps } from "next/link";
 import OnchainBalanceMobile from "@/components/hooks/read/useBalanceMobile";
 import ConnectMobileWalletButton from "@/components/connectMobileButton";
 import SummerKit from "@/public/SummerKit-Base.svg"
-import Farcaster from "@/public/farcasterLogo.svg";
+import { SiFarcaster } from "react-icons/si";
 import { useRouter } from "next/navigation";
 import { MenuIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -17,6 +17,7 @@ import { FaDiscord } from "react-icons/fa";
 import { PiXLogoFill } from "react-icons/pi";
 import { BiLogoTelegram } from "react-icons/bi";
 import { siteConfig } from '@/lib/site';
+import { ModeToggle } from "../ui/mode-toggle";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -28,14 +29,14 @@ export function MobileNav() {
           variant="ghost"
           className="px-0 mr-2 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
-          <div className="border border-zinc-800/50 p-1.5 rounded-full hover:bg-zinc-900">
+          <div className="border border-zinc-800/50 p-1.5 rounded-full hover:bg-accent">
             <MenuIcon className="w-5 h-5" />
           </div>
         </Button>
       </SheetTrigger>
       <SheetContent
         side="right"
-        className={`bg-soul-950 border-l border-zinc-800/50 rounded-l-3xl`}
+        className={`bg-card border-l border-zinc-800/50 rounded-l-3xl`}
       >
         <MobileLink
           href="/"
@@ -57,7 +58,7 @@ export function MobileNav() {
               href="/"
               className="flex items-center"
               onOpenChange={setOpen}>
-              <Button className="bg-zinc-900 hover:bg-zinc-800/80 rounded-full w-full">
+              <Button className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent bg-transparent text-foreground w-full">
                 Explore
               </Button>
             </MobileLink>
@@ -65,7 +66,7 @@ export function MobileNav() {
               href={siteConfig.links.trade}
               className="flex items-center"
               onOpenChange={setOpen}>
-              <Button className="bg-zinc-900 hover:bg-zinc-800/80 rounded-full w-full">
+              <Button className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent bg-transparent text-foreground w-full">
                 Trade
               </Button>
             </MobileLink>
@@ -73,32 +74,33 @@ export function MobileNav() {
               href={siteConfig.links.bridge}
               className="flex items-center"
               onOpenChange={setOpen}>
-              <Button className="bg-zinc-900 hover:bg-zinc-800/80 rounded-full w-full">
+              <Button className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent bg-transparent text-foreground w-full">
                 Bridge
               </Button>
             </MobileLink>
           </div>
           <div className="flex gap-2 justify-center mt-2">
-            <Link href={siteConfig.links.farcaster} target="blank">
-              <div className="p-1.5 border border-zinc-800/50 rounded-full bg-zinc-900 hover:bg-zinc-800/80">
-                <Image src={Farcaster} width={16} alt="Farcaster" />
+          <Link href={siteConfig.links.farcaster} target="_blank">
+              <div className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent">
+                <SiFarcaster size={18} className='dark:text-zinc-300 dark:hover:text-zinc-100 text-zinc-900/90' />
               </div>
             </Link>
             <Link href={siteConfig.links.twitter} target="blank">
-              <div className="p-1.5 border border-zinc-800/50 rounded-full bg-zinc-900 hover:bg-zinc-800/80">
-                <PiXLogoFill size={16} />
+              <div className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent">
+                <PiXLogoFill size={18} />
               </div>
             </Link>
             <Link href={siteConfig.links.discord} target="blank">
-              <div className="p-1.5 border border-zinc-800/50 rounded-full bg-zinc-900 hover:bg-zinc-800/80">
-                <FaDiscord size={16} />
+              <div className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent">
+                <FaDiscord size={18} />
               </div>
             </Link>
             <Link href={siteConfig.links.telegram} target="blank">
-              <div className="p-1.5 border border-zinc-800/50 rounded-full bg-zinc-900 hover:bg-zinc-800/80">
-                <BiLogoTelegram size={16} />
+              <div className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent">
+                <BiLogoTelegram size={18} />
               </div>
             </Link>
+            <ModeToggle />
           </div>
         </ScrollArea>
       </SheetContent>

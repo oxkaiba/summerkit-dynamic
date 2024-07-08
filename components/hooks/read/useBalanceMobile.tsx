@@ -21,9 +21,9 @@ export default function OnchainBalanceMobile() {
   }
 
   return (
-    <div className="bg-zinc-900 p-2.5 px-4 rounded-full text-sm font-medium flex justify-center">
+    <div className="p-2.5 px-4 rounded-full hover:bg-accent bg-transparent text-foreground border-zinc-800/50 border w-full text-sm font-medium flex justify-center">
       {formattedBalance} {data?.symbol}
-      <Avatar className='w-5 h-5 ml-2 bg-soul-900 border border-zinc-800/50'>
+      <Avatar className='w-5 h-5 ml-2'>
         <AvatarImage src={Eth.src} />
       </Avatar>
     </div>

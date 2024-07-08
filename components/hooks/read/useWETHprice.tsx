@@ -84,8 +84,8 @@ const WETHPrice: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div className='flex items-center border border-zinc-800/50 p-2 px-2.5 text-zinc-100
-    hover:text-zinc-300 font-semibold text-xs rounded-full'>
+    return <div className='flex items-center border border-zinc-800/50 p-2 px-2.5 text-foreground
+    font-semibold text-xs rounded-full'>
       Loading...
       <Loader2 size={16} className="ml-2 animate-spin text-base-500" />
     </div>;
@@ -96,10 +96,10 @@ const WETHPrice: React.FC = () => {
   }
 
   return (
-    <div className='flex items-center border border-zinc-800/50 p-2 px-2.5 text-zinc-100
-    hover:text-zinc-300 font-semibold text-xs rounded-full hover:bg-zinc-900'>
+    <div className='flex items-center border border-zinc-800/50 p-2 px-2.5 text-foreground
+   font-semibold text-xs rounded-full'>
       <span>${wethPrice}</span>
-      <Avatar className='w-4 h-4 bg-soul-900 ml-1.5'>
+      <Avatar className='w-4 h-4 ml-1.5'>
         <AvatarImage src={Eth.src} />
       </Avatar>
     </div>

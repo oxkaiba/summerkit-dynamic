@@ -24,7 +24,7 @@ export default function BlockNumber() {
     <div className="flex items-center">
       {isLoading ? (
         <div className='flex items-center border border-zinc-800/50 p-2 px-2.5 rounded-full'>
-          <span className="text-zinc-100 hover:text-zinc-300 font-semibold text-xs flex items-center">
+          <span className="text-foreground font-semibold text-xs flex items-center">
             Loading...
             <Loader2 size={16} className="ml-2 animate-spin text-base-500" />
           </span>
@@ -40,14 +40,14 @@ export default function BlockNumber() {
           >
             <HoverCard>
               <HoverCardTrigger>
-                <div className="flex items-center border border-zinc-800/50 p-2 px-2.5 text-zinc-100
-                 hover:text-zinc-300 font-semibold text-xs rounded-full hover:bg-zinc-900">
+                <div className="flex items-center border border-zinc-800/50 p-2 px-2.5 text-foreground
+                 font-semibold text-xs rounded-full hover:bg-accent">
                   {data.toString()}
-                  <span className="bg-base-500 rounded-full ml-1.5 h-2 w-2 inline-block animate-pulse"></span>
+                  <span className="bg-blue-500 rounded-full ml-1.5 h-2 w-2 inline-block animate-pulse"></span>
                 </div>
               </HoverCardTrigger>
-              <HoverCardContent className='bg-zinc-900/50 border-zinc-800/50 text-xxs font-medium ml-2 mb-4 rounded-full px-2.5'>
-                The most recent block on Base.
+              <HoverCardContent className='bg-accent border-zinc-800/50 text-xs font-medium ml-2 mb-4 rounded-full px-4'>
+                The most recent block number on Base.
               </HoverCardContent>
             </HoverCard>
           </Link>

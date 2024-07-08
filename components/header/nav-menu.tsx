@@ -14,10 +14,10 @@ export function NavMenu() {
         <Link
           href="/"
           className={cn(
-            'hover:bg-zinc-800/80 p-1.5 px-4 rounded-full border border-zinc-800/50',
+            'hover:bg-accent p-1.5 px-4 rounded-full border border-zinc-80/40',
             pathname === '/'
-              ? 'bg-zinc-900 p-1.5 px-4 rounded-full border border-zinc-800/50'
-              : 'text-white'
+              ? 'p-1.5 px-4 rounded-full border border-zinc-800/40'
+              : 'text-foreground'
           )}
         >
           <p>
