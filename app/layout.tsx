@@ -1,5 +1,3 @@
-"use client"
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site"
