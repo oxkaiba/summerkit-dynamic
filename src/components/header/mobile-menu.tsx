@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-
 import * as React from "react";
 import Link, { LinkProps } from "next/link";
 import OnchainBalanceMobile from "@/components/hooks/read/useBalanceMobile";
@@ -87,17 +86,17 @@ export function MobileNav() {
             </Link>
             <Link href={siteConfig.links.twitter} target="blank">
               <div className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent">
-                <PiXLogoFill size={18} />
+                <PiXLogoFill size={18} className="dark:text-zinc-300 dark:hover:text-zinc-100 text-zinc-900/90" />
               </div>
             </Link>
             <Link href={siteConfig.links.discord} target="blank">
               <div className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent">
-                <FaDiscord size={18} />
+                <FaDiscord size={18} className="dark:text-zinc-300 dark:hover:text-zinc-100 text-zinc-900/90" />
               </div>
             </Link>
             <Link href={siteConfig.links.telegram} target="blank">
               <div className="p-1.5 border border-zinc-800/50 rounded-full hover:bg-accent">
-                <BiLogoTelegram size={18} />
+                <BiLogoTelegram size={18} className="dark:text-zinc-300 dark:hover:text-zinc-100 text-zinc-900/90" />
               </div>
             </Link>
             <ModeToggle />
