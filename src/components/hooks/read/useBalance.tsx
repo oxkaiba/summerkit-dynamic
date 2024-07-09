@@ -15,7 +15,7 @@ export default function OnchainBalance() {
     Connecting… <Loader2 className="ml-2 h-4 w-4 animate-spin text-base-500" />
   </div>;
   if (isDisconnected) return <div className="px-4 text-xs font-semibold flex justify-center items-center">
-    No&nbsp;account&nbsp;connected <Wallet size={18} className='ml-1 text-muted-foreground' />
+    No&nbsp;account&nbsp;connected <span className='bg-gradient-to-tr from-zinc-500/50 to-blue-500 rounded-full p-1 ml-1'><Wallet size={13} className='text-foreground' /></span>
   </div>;
   if (isLoading) return <div className="text-xxs font-semibold flex justify-center items-center">
     Fetching balance… <Loader2 className="ml-2 h-4 w-4 animate-spin text-base-500" /></div>;
