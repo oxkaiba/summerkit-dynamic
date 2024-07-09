@@ -47,7 +47,7 @@ export default function BlockNumber() {
                 </div>
               </HoverCardTrigger>
               <HoverCardContent className='bg-accent border-zinc-800/50 text-xs font-medium ml-2 mb-4 rounded-full px-4'>
-                The most recent block number on Base.
+                The most recent block on Base.
               </HoverCardContent>
             </HoverCard>
           </Link>
