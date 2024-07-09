@@ -46,7 +46,7 @@ export default function BlockNumber() {
                   <span className="bg-blue-500 rounded-full ml-1.5 h-2 w-2 inline-block animate-pulse"></span>
                 </div>
               </HoverCardTrigger>
-             <HoverCardContent className='bg-card border-zinc-800/50 text-xs font-medium ml-2 mb-4 rounded-full'>
+             <HoverCardContent className='bg-card border-zinc-800/50 text-xs font-medium ml-2 mb-4 px-4 rounded-full'>
                 The most recent block on Base.
               </HoverCardContent>
             </HoverCard>
