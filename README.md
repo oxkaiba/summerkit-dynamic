@@ -7,19 +7,15 @@ This is a [Next.js](https://nextjs.org/) project using [Dynamic](https://dynamic
 Open your IDE of choice and run 
 
 ```bash 
-git clone https://github.com/summershsh/SummerKit.git
+git clone https://github.com/oxkaiba/summerkit-dynamic.git
 ```
 Then, install all the dependencies needed by running:
 
 ```bash
-npm install
-# or
 yarn
 ```
 Finally, run
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
