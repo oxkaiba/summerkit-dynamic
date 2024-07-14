@@ -1,5 +1,5 @@
 "use client"
-
+// Here we use Dexscreener to pull up the price of WETH, you can use this example to pull the price for your own token.
 import React, { useEffect, useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
@@ -84,10 +84,10 @@ const WETHPrice: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div className='flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-2.5 text-foreground
-    font-semibold text-xs rounded-full'>
+    return <div className='flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-3 text-foreground
+    font-semibold text-sm rounded-full'>
       Loading...
-      <Loader2 size={12} className="ml-2 animate-spin text-foreground/80" />
+      <Loader2 size={14} className="ml-2 animate-spin text-foreground/80" />
     </div>;
   }
 
@@ -96,8 +96,8 @@ const WETHPrice: React.FC = () => {
   }
 
   return (
-    <div className='flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-2.5 text-foreground
-   font-semibold text-xs rounded-full'>
+    <div className='flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-3 text-foreground
+   font-semibold text-sm rounded-full'>
       <span>${wethPrice}</span>
       <Avatar className='w-4 h-4 ml-1.5'>
         <AvatarImage src={Eth.src} />

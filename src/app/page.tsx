@@ -1,4 +1,5 @@
 import PcLogoSummer from "@/components/pcLogoSummer";
+import { SummerCard } from "@/components/summerCard";
 import { siteConfig } from "@/lib/site";
 
 // We export the metadata here because we are using "use client" on layout.tsx
@@ -26,8 +27,6 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
         alt: siteConfig.name,
       },
     ],
@@ -45,11 +44,19 @@ export const metadata = {
 };
 
 const Home = () => (
-  <main className="flex flex-col items-center justify-center">
-  <div className="w-full flex justify-center p-4">
-    <PcLogoSummer />
-  </div>
-</main>
+  <>
+    <main className="flex flex-col items-center justify-center">
+      <div className="w-full flex justify-center p-4">
+        <PcLogoSummer />
+      </div>
+      <div className="w-full flex-col justify-center space-y-4 mt-auto pb-20">
+        <SummerCard />
+      </div>
+    </main>
+  </>
 );
 
 export default Home;
+
+
+

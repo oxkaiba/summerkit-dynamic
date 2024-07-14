@@ -27,25 +27,15 @@
 
     /* Custom CSS to override Dynamic Button */
     .dynamic-shadow-dom {
-      --dynamic-font-family-primary: "Poppins", sans-serif;
-      --dynamic-font-family-numbers: "Roboto Mono", monospace, sans-serif;
+      --dynamic-font-family-primary: "Geist", sans-serif;
       --dynamic-border-radius: 56px;
       --dynamic-base-1: #fafafa;
       --dynamic-base-2: #fafafa;
       --dynamic-base-3: #fafafa;
       --dynamic-base-4: #fafafa;
       --dynamic-base-5: #fafafa;
-      --dynamic-connect-button-background: #fff;
-      --dynamic-connect-button-color: #ffffff;
-      --dynamic-connect-button-background-hover: #4779FF;
-      --dynamic-connect-button-color-hover: #fff;
-      --dynamic-connect-button-shadow-hover: 0px 3px 0px #000000;
-      --dynamic-tooltip-color: #000;
-      --dynamic-tooltip-text-color: #fff;
       --dynamic-modal-width: 22.5rem;
       --dynamic-modal-padding: 1.5rem;
-      --dynamic-text-primary: #616161;
-      --dynamic-text-secondary: rgb(0, 0, 0);
     }
   }
 
@@ -72,25 +62,14 @@
 
     /* Custom CSS to override Dynamic Button in dark mode */
     .dynamic-shadow-dom {
-      --dynamic-font-family-primary: "Poppins", sans-serif;
-      --dynamic-font-family-numbers: "Roboto Mono", monospace, sans-serif;
       --dynamic-border-radius: 56px;
       --dynamic-base-1: #171717;
       --dynamic-base-2: #1F1E24;
       --dynamic-base-3: #1F1E24;
       --dynamic-base-4: #34333a;
       --dynamic-base-5: #1F1E24;
-      --dynamic-connect-button-background: #fff;
-      --dynamic-connect-button-color: #000;
-      --dynamic-connect-button-background-hover: #4779FF;
-      --dynamic-connect-button-color-hover: #fff;
-      --dynamic-connect-button-shadow-hover: 0px 3px 0px #000000;
-      --dynamic-tooltip-color: #000;
-      --dynamic-tooltip-text-color: #fff;
       --dynamic-modal-width: 22.5rem;
       --dynamic-modal-padding: 1.5rem;
-      --dynamic-text-primary: #818181;
-      --dynamic-text-secondary: white;
     }
   }
 }
@@ -130,4 +109,10 @@ body {
 
 .onchainsummer-font {
   font-family: 'OnchainSummer', sans-serif;
+}
+
+/* Geist Sans Font for Dynamic */
+@font-face {
+  font-family: 'Geist';
+  src: url('../../public/fonts/GeistVF.ttf') format('truetype');
 }

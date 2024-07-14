@@ -10,13 +10,13 @@ export function NavMenu() {
 
   return (
     <div className="hidden md:flex ml-4">
-      <nav className="flex items-center text-sm font-bold gap-1">
+      <nav className="flex items-center text-sm font-semibold gap-1">
         <Link
           href="/"
           className={cn(
-            'hover:bg-accent p-1.5 px-4 rounded-full border dark:border-zinc-800/50 border-zinc-800/20 text-foreground/90',
+            'hover:bg-accent p-2 px-4 rounded-full border dark:border-zinc-800/50 border-zinc-800/20 text-foreground/90',
             pathname === '/'
-              ? 'p-1.5 px-4 rounded-full border dark:border-zinc-800/50 border-zinc-800/20 text-foreground/90'
+              ? 'p-2 px-4 rounded-full border dark:border-zinc-800/50 border-zinc-800/20 text-foreground'
               : 'text-foreground/90'
           )}
         >

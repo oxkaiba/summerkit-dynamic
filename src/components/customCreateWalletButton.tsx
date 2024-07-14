@@ -94,19 +94,19 @@ export function CustomCreateWalletButton() {
       <HoverCard>
         <HoverCardTrigger>
           <button
-            className="flex items-center bg-transparent border dark:border-zinc-800/50 border-zinc-800/20 hover:bg-accent p-2 px-3 rounded-full text-sm font-semibold"
+            className="flex items-center bg-transparent border dark:border-zinc-800/50 border-zinc-800/20 hover:bg-accent p-2.5 px-3.5 rounded-full text-sm font-semibold"
           >
-            <RiStopCircleFill size={18} className='dark:text-zinc-300 text-zinc-900/80' />&nbsp;
-            <p className='dark:text-zinc-300/70 text-zinc-900/80'>/</p>&nbsp;
-            <CircleCheck size={18} className='dark:text-blue-500 text-blue-500' />
+            <RiStopCircleFill size={22} className='dark:text-zinc-200 text-zinc-900/90' />&nbsp;
+            <p className='dark:text-zinc-300/80 text-zinc-900/80 text-xs'>/</p>&nbsp;
+            <CircleCheck size={22} className='text-blue-500' />
           </button>
         </HoverCardTrigger>
-        <HoverCardContent className='bg-card dark:border-zinc-800/50 border-zinc-800/20 text-xxs font-medium mt-2.5 rounded-2xl px-4'>
+        <HoverCardContent className='bg-card dark:border-zinc-800/50 border-zinc-800/20 text-sm font-medium mt-4 rounded-2xl px-4'>
           <div className='flex items-center'>
             <p>Smart Wallet found </p>
-            <Badge className='pl-1 pr-0.5 -py-1 text-foreground text-xxs dark:bg-zinc-800/80 bg-zinc-800/20 ml-1 font-normal'>
+            <Badge className='text-foreground text-sm dark:bg-zinc-800/80 bg-zinc-800/20 ml-1 font-normal'>
               <p className='mt-0.5'>{formatAddress(walletAddress!)}</p>
-              <Image src={CoinbaseWallet} alt='Coinbase' width={18} className='ml-0.5' />
+              <RiStopCircleFill size={16} className='text-blue-500 ml-1' />
             </Badge>
           </div>
           <p className='mt-0.5'>connect it using the connect button.</p>
@@ -119,12 +119,11 @@ export function CustomCreateWalletButton() {
     <button
       className='flex animate-background-shine items-center justify-center rounded-full 
     border dark:border-zinc-800/50 border-zinc-800/20 dark:bg-[linear-gradient(110deg,#1a1a1a,45%,#505050,55%,#1a1a1a)] bg-[linear-gradient(110deg,#f4f4f5,45%,#0053FE2b,55%,#f4f4f5)] bg-[length:200%_100%] 
-    px-4 text-sm font-semibold dark:hover:bg-[linear-gradient(110deg,#1a1a1a,45%,#323232,55%,#1a1a1a)] transition-all'
+    p-1 md:p-2 md:px-4 px-4 dark:hover:bg-[linear-gradient(110deg,#1a1a1a,45%,#323232,55%,#1a1a1a)] transition-all'
       onClick={createWallet}
     >
-      <p className="font-medium sm:font-semibold">Create&nbsp;Wallet</p>
-
-      <RiStopCircleFill size={19} className='ml-1.5 text-foreground/90' />
+      <RiStopCircleFill size={22} className='text-foreground/90' />
+      <p className="text-md font-medium ml-1.5 pr-1.5">Create&nbsp;Wallet</p>
     </button>
   );
 }

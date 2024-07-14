@@ -12,8 +12,7 @@ export default function CustomConnectButton() {
       <DynamicWidget />
     ) : (
       <button
-        className="bg-transparent border dark:border-zinc-800/50 border-zinc-800/20 hover:bg-accent p-2 px-4 rounded-full text-sm
-        font-semibold"
+        className="bg-accent border dark:border-zinc-800/50 border-zinc-800/20 hover:bg-card p-2 px-4 rounded-full text-md font-medium"
         onClick={() => setShowAuthFlow(true)}
       >
         Connect&nbsp;Wallet

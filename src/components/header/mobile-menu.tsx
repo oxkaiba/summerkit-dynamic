@@ -1,12 +1,10 @@
 "use client";
 import Image from "next/image";
-
 import * as React from "react";
 import Link, { LinkProps } from "next/link";
 import OnchainBalanceMobile from "@/components/hooks/read/useBalanceMobile";
 import ConnectMobileWalletButton from "@/components/connectMobileButton";
 import SummerKit from "@/public/skit.svg"
-import BaseSymbol from "@/public/base-brand-kit/symbol/Base_Symbol_Blue.svg";
 import { SiFarcaster } from "react-icons/si";
 import { useRouter } from "next/navigation";
 import { MenuIcon } from "lucide-react";
@@ -19,7 +17,7 @@ import { PiXLogoFill } from "react-icons/pi";
 import { BiLogoTelegram } from "react-icons/bi";
 import { siteConfig } from '@/lib/site';
 import { ModeToggle } from "../ui/mode-toggle";
-import { CustomCreateWalletButton } from "../customCreateWalletButton";
+import { CustomCreateWalletMobileButton } from "../customCreateWalletMobileButton";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -48,7 +46,7 @@ export function MobileNav() {
           <div className="mb-1 flex justify-between items-center gap-1">
             <div className="w-full space-y-1 mt-4">
               <span className="flex space-x-1 justify-center">
-                <CustomCreateWalletButton />
+                <CustomCreateWalletMobileButton />
                 <ConnectMobileWalletButton />
               </span>
               <OnchainBalanceMobile />
@@ -80,24 +78,24 @@ export function MobileNav() {
               </Button>
             </MobileLink>
           </div>
-          <div className="flex gap-2 justify-center mt-2">
+          <div className="flex items-center gap-1.5 justify-center mt-2">
             <Link href={siteConfig.links.farcaster} target="_blank">
-              <div className="p-1.5 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
+              <div className="p-2 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
                 <SiFarcaster size={18} className='text-zinc-900/95 dark:text-zinc-100 dark:hover:text-zinc-300' />
               </div>
             </Link>
             <Link href={siteConfig.links.twitter} target="blank">
-              <div className="p-1.5 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
+              <div className="p-2 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
                 <PiXLogoFill size={18} className="text-zinc-900/95 dark:text-zinc-100 dark:hover:text-zinc-300" />
               </div>
             </Link>
             <Link href={siteConfig.links.discord} target="blank">
-              <div className="p-1.5 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
+              <div className="p-2 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
                 <FaDiscord size={18} className="text-zinc-900/95 dark:text-zinc-100 dark:hover:text-zinc-300" />
               </div>
             </Link>
             <Link href={siteConfig.links.telegram} target="blank">
-              <div className="p-1.5 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
+              <div className="p-2 border dark:border-zinc-800/50 border-zinc-800/20 rounded-full hover:bg-accent">
                 <BiLogoTelegram size={18} className="text-zinc-900/95 dark:text-zinc-100 dark:hover:text-zinc-300" />
               </div>
             </Link>

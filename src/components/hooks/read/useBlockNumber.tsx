@@ -23,10 +23,10 @@ export default function BlockNumber() {
   return (
     <div className="flex items-center">
       {isLoading ? (
-        <div className='flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-2.5 rounded-full'>
-          <span className="text-foreground font-semibold text-xs flex items-center">
+        <div className='flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-3 rounded-full'>
+          <span className="text-foreground font-semibold text-sm flex items-center">
             Loading...
-            <Loader2 size={12} className="ml-2 animate-spin text-foreground/80" />
+            <Loader2 size={14} className="ml-2 animate-spin text-foreground/80" />
           </span>
 
         </div>
@@ -40,13 +40,13 @@ export default function BlockNumber() {
           >
             <HoverCard>
               <HoverCardTrigger>
-                <div className="flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-2.5 text-foreground
-                 font-semibold text-xs rounded-full hover:bg-accent">
+                <div className="flex items-center border dark:border-zinc-800/50 border-zinc-800/20 p-2 px-3 text-foreground
+                 font-semibold text-sm rounded-full hover:bg-accent">
                   {data.toString()}
-                  <span className="bg-blue-500 rounded-full ml-1.5 h-2 w-2 inline-block animate-pulse"></span>
+                  <span className="bg-blue-500 rounded-full ml-1.5 h-2.5 w-2.5 inline-block animate-pulse"></span>
                 </div>
               </HoverCardTrigger>
-              <HoverCardContent className='bg-card dark:border-zinc-800/50 border-zinc-800/20 text-xs font-medium ml-2 mb-4 rounded-full px-4'>
+              <HoverCardContent className='bg-card dark:border-zinc-800/50 border-zinc-800/20 text-sm ml-4 mb-6 rounded-full px-4'>
                 The most recent block on Base.
               </HoverCardContent>
             </HoverCard>
